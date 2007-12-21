@@ -10,6 +10,7 @@ Group:		Sound
 URL:		http://pyid3lib.sourceforge.net/
 Source:		http://download.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch: pyid3lib-0.5.1-64bit.patch
+Buildroot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	libid3-devel
 BuildRequires:	zlib-devel
 BuildRequires:	python-devel
