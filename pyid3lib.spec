@@ -1,5 +1,5 @@
 %define version 0.5.1
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary:	Python module for editing ID3v2 tags of MP3 audio files
 Name:		pyid3lib
