@@ -1,5 +1,5 @@
 %define version 0.5.1
-%define release %mkrel 14
+%define release  15
 
 Summary:	Python module for editing ID3v2 tags of MP3 audio files
 Name:		pyid3lib
@@ -11,7 +11,6 @@ URL:		http://pyid3lib.sourceforge.net/
 Source:		http://download.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0: pyid3lib-0.5.1-64bit.patch
 Patch1: pyid3lib-0.5.1-gcc-4.4.patch
-Buildroot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	pkgconfig(id3tag)
 BuildRequires:	zlib-devel
 BuildRequires:	python-devel
