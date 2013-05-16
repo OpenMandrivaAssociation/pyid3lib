@@ -1,17 +1,14 @@
-%define version 0.5.1
-%define release  15
-
 Summary:	Python module for editing ID3v2 tags of MP3 audio files
 Name:		pyid3lib
-Version:	%{version}
-Release:	%{release}
+Version:	0.5.1
+Release:	15
 License:	LGPL
 Group:		Sound
 URL:		http://pyid3lib.sourceforge.net/
 Source:		http://download.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0: pyid3lib-0.5.1-64bit.patch
 Patch1: pyid3lib-0.5.1-gcc-4.4.patch
-BuildRequires:	pkgconfig(id3tag)
+BuildRequires:	libid3-devel
 BuildRequires:	zlib-devel
 BuildRequires:	python-devel
 
@@ -28,14 +25,11 @@ chmod -R go+rX .
 %{_bindir}/python setup.py build
 
 %install
-rm -rf %{buildroot}
 %{_bindir}/python setup.py install --root=%{buildroot}
 
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
 %doc COPYING doc.html README
 %py_platsitedir/*
 
@@ -79,18 +73,18 @@ rm -rf %{buildroot}
     - kill re-definition of %%buildroot on Pixel's request
 
 
-* Mon Dec 11 2006 Götz Waschk <waschk@mandriva.org> 0.5.1-6mdv2007.0
+* Mon Dec 11 2006 GÃ¶tz Waschk <waschk@mandriva.org> 0.5.1-6mdv2007.0
 + Revision: 94780
 - bump release tag
 - fix build on 64 bit
 - Import pyid3lib
 
-* Tue Nov 28 2006 G�tz Waschk <waschk@mandriva.org> 0.5.1-5mdv2007.1
+* Tue Nov 28 2006 Götz Waschk <waschk@mandriva.org> 0.5.1-5mdv2007.1
 - update file list
 
 * Sun Dec 05 2004 Michael Scherer <misc@mandrake.org> 0.5.1-4mdk
 - Rebuild for new python
 
-* Tue Jun 08 2004 G�tz Waschk <waschk@linux-mandrake.com> 0.5.1-3mdk
+* Tue Jun 08 2004 Götz Waschk <waschk@linux-mandrake.com> 0.5.1-3mdk
 - rebuild for new g++
 
