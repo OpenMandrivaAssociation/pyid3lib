@@ -12,7 +12,7 @@ Source:		http://download.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0: pyid3lib-0.5.1-64bit.patch
 Patch1: pyid3lib-0.5.1-gcc-4.4.patch
 Buildroot:	%{_tmppath}/%{name}-%{version}-root
-BuildRequires:	libid3-devel
+BuildRequires:	pkgconfig(id3tag)
 BuildRequires:	zlib-devel
 BuildRequires:	python-devel
 
