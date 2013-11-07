@@ -1,5 +1,5 @@
---- pyid3lib.cc
-+++ pyid3lib.cc
+--- ./pyid3lib.cc
++++ ./pyid3lib.cc
 @@ -920,7 +920,7 @@ enum frame_type
  
  typedef struct
