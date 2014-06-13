@@ -1,7 +1,7 @@
 Summary:	Python module for editing ID3v2 tags of MP3 audio files
 Name:		pyid3lib
 Version:	0.5.1
-Release:	20
+Release:	21
 License:	LGPLv2
 Group:		Sound
 Url:		http://pyid3lib.sourceforge.net/
