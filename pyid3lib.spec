@@ -10,7 +10,7 @@ Patch0:		pyid3lib-0.5.1-64bit.patch
 Patch1:		pyid3lib-0.5.1-gcc-4.4.patch
 BuildRequires:	id3lib-devel
 BuildRequires:	pkgconfig(zlib)
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python2)
 
 %description
 %{name} is a Python module for editing ID3v2 tags of MP3 audio files.
@@ -21,12 +21,12 @@ BuildRequires:	pkgconfig(python)
 chmod -R go+rX .
 
 %build
-%{_bindir}/python setup.py build
+%{__python2} setup.py build
 
 %install
-%{_bindir}/python setup.py install --root=%{buildroot}
+%{__python2} setup.py install --root=%{buildroot}
 
 %files
 %doc COPYING doc.html README
-%py_platsitedir/*
+%py2_platsitedir/*
 
