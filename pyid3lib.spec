@@ -17,7 +17,7 @@ BuildRequires:	pkgconfig(python2)
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 chmod -R go+rX .
 
 %build
