@@ -4,7 +4,7 @@ Version:	0.5.1
 Release:	27
 License:	LGPLv2
 Group:		Sound
-Url:		http://pyid3lib.sourceforge.net/
+Url:		https://pyid3lib.sourceforge.net/
 Source0:	http://download.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		pyid3lib-0.5.1-64bit.patch
 Patch1:		pyid3lib-0.5.1-gcc-4.4.patch
